@@ -27,7 +27,6 @@ g++ src/rapidxml.hpp src/rapidxml_utils.hpp src/tmx_utils.cpp src/tmx_core.cpp s
 ##Example:
 The following is an example of how to use the wrapper classes found in *tmx.h*.
 
-#####Code
 ```C++
 #include <iostream>
 
