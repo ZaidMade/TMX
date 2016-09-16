@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include <cstring>
 #include <string>
 
 #include "tlist.hpp"
