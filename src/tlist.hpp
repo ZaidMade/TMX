@@ -12,6 +12,7 @@
 
 template <class T> class TList {
 public:
+    TList() { _next = nullptr; }
     TList(const T& p_val){ _value = p_val; _next = nullptr; }
 
     /** @returns [T] The value of this list instance. */

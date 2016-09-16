@@ -57,8 +57,15 @@ void dumpNode(sNode& p_node, unsigned int s = 0) {
 }
 
 int main() {
-	sNode tmxmap = load("media/map.tmx");
-	dumpNode(tmxmap);
+	tmxnode map(load("media/map.tmx"));
+    tmxnode first;
+
+    while(map.pollChildren(first)){
+        std::cout << tagToStr(first.tag()) << " ";
+    }
+
+    //sNode mymap = load("media/map.tmx");
+    //dumpNode(mymap);
 
 	//char* c = "TWFyeSBoYWQgYSBsaXR0bGUgbGFtYg==";
 	//base64_decode(c, strlen(c));
