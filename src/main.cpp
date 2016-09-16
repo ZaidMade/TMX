@@ -3,6 +3,12 @@
 	BASE64 DECODING^
 */
 
+/**
+ * @todo figure out how I implemented data again.
+ * @todo have the data accessible from the wrapper class.
+ * @todo figure out a pretty way to retrieve tile layer data.
+ */
+
 #include <iostream>
 using namespace std;
 
@@ -61,7 +67,7 @@ int main() {
     tmxnode first;
 
     while(map.pollChildren(first)){
-        std::cout << tagToStr(first.tag()) << " ";
+        //YO DIPSHIT: Apparently <data> is stored as a child node, what?
     }
 
     //sNode mymap = load("media/map.tmx");

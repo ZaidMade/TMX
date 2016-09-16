@@ -69,9 +69,9 @@ tmx::eTag xmlEvalTag(rapidxml::xml_node<>* p_node) {
     if (!(p_node->name_size() > 0))
         return eTag::ignore;
 
-        std::string t = p_node->name();
+    std::string t = p_node->name();
 
-        // Define all TMX tags to look out for and their associated aliases.
+    // Define all TMX tags to look out for and their associated aliases.
     struct sTagDict { std::string key; eTag value; };
     std::vector<sTagDict> tagDict{
         { "tile", eTag::tile },
@@ -168,6 +168,7 @@ bool xmlLoadNodeProps(rapidxml::xml_node<>* p_xnode, sNode& p_tnode) {
 bool xmlLoadDataCSV(rapidxml::xml_node<>* p_xnode, sNode& p_tnode) {
     if (p_tnode.tag != eTag::data)
         return false;
+
     std::string enc = getNodeVar(p_tnode, "encoding").value;
     std::string comp = getNodeVar(p_tnode, "compression").value;
 
@@ -210,6 +211,7 @@ bool xmlLoadNodeData(rapidxml::xml_node<>* p_xnode, sNode& p_tnode) {
     // Check if the XML node is valid.
     if (p_xnode == nullptr)
         return false;
+
     // Check if the TMX node is valid to have raw data.
     if (p_tnode.tag != eTag::image && p_tnode.tag != eTag::layer)
         return false;
@@ -236,6 +238,7 @@ bool xmlLoadNodeData(rapidxml::xml_node<>* p_xnode, sNode& p_tnode) {
 
     if(!xmlLoadDataCSV(data, *n))
         return false;
+
     return true;
 }
 
