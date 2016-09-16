@@ -15,11 +15,11 @@ namespace tmx {
      * @param p_len Length of the C-string holding the raw data to decode.
      * @returns [std::string] Decoded data set.
      */
-	std::string base64_decode(const char* p_raw, const size_t p_len);
+    std::string base64_decode(const char* p_raw, const size_t p_len);
 
-	/**
+    /**
      * @todo zlib decompress
-	 * @todo gzip decompress
+     * @todo gzip decompress
      */
 }
 
