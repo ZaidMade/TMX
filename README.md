@@ -21,3 +21,23 @@ Compiled using [GCC v6.1.1](https://gcc.gnu.org/) on Fedora 24.
 ```Shell
 g++ src/rapidxml.hpp src/rapidxml_utils.hpp src/tmx_utils.cpp src/tmx_core.cpp src/tmx.cpp src/main.cpp
 ```
+
+---
+
+##Usage:
+Everything displayed here can be used by linking the compiled library and including *tmx.h* in your C++ project.
+
+####Loading
+```C++
+tmx::tmxnode map_node(tmx::load("<FILE_PATH>"));
+```
+
+####Retrieving attributes
+```C++
+tmx::tmxnode::attr("<ATTRIBUTE_NAME>");
+```
+
+####Retrieving properties
+```C++
+tmx::tmxnode::prop("<ATTRIBUTE_NAME>");
+```
