@@ -24,20 +24,31 @@ g++ src/rapidxml.hpp src/rapidxml_utils.hpp src/tmx_utils.cpp src/tmx_core.cpp s
 
 ---
 
-##Usage:
-Everything displayed here can be used by linking the compiled library and including *tmx.h* in your C++ project.
+##Example:
+The following is an example of how to use the wrapper classes found in *tmx.h*.
 
-####Loading
+#####Code
 ```C++
-tmx::tmxnode map_node(tmx::load("<FILE_PATH>"));
-```
+#include <iostream>
 
-####Retrieving attributes
-```C++
-tmx::tmxnode::attr("<ATTRIBUTE_NAME>");
-```
+#include "tmx.h"
+using namespace tmx;
 
-####Retrieving properties
-```C++
-tmx::tmxnode::prop("<ATTRIBUTE_NAME>");
+int main(){
+    tmxnode map(load("file/path"));
+    tmxnode children;
+
+    // print map attribute 'version'
+    std::cout << map.attr("version") << std::endl;
+
+    // poll over all child nodes of map
+    while(map.pollChildren(children)){
+        //print child tag value
+        std::cout << children.tag() << ", ";
+
+        //print child property 'my_property'
+        std::cout << children.prop("my_property") << std::endl;
+    }
+    return 0;
+}
 ```
