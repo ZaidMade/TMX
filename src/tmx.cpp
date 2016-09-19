@@ -27,6 +27,12 @@ namespace tmx {
         return getNodeVar(_mynode, p_property, true);
     }
 
+    sData tmxnode::data(){
+        if(tag() == eTag::data)
+            return *_mynode.data;
+        return mkData("\"", eEnc::text);
+    }
+
     bool tmxnode::pollChildren(tmxnode& p_to){
         // Check if the end of child nodes has been reached.
         if(_childiter == nullptr){

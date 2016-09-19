@@ -65,9 +65,12 @@ void dumpNode(sNode& p_node, unsigned int s = 0) {
 int main() {
 	tmxnode map(load("media/map.tmx"));
     tmxnode first;
+    tmxnode second;
 
     while(map.pollChildren(first)){
-        //YO DIPSHIT: Apparently <data> is stored as a child node, what?
+        while(first.pollChildren(second)){
+            std::cout << second.data().value << std::endl;
+        }
     }
 
     //sNode mymap = load("media/map.tmx");

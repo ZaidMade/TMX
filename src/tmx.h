@@ -43,6 +43,8 @@ namespace tmx {
          */
         sVal prop(str_p p_property);
 
+        sData data();
+
         /**
          * Poll over all this node's child nodes.
          *
