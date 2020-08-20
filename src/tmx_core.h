@@ -1,6 +1,6 @@
 /**============================================================================
  * tmx_core.h - C++ TMX Map Loader Core
- * Copyright (c) 2016-2017, Logan Moore <logan.moore513@gmail.com>
+ * Copyright (c) 2016-2017, Zaid
  *
  * Aliases for commonly used values, data structures used to store the map's
  * data and core function declarations. It's recommended that you shy away
@@ -10,7 +10,7 @@
  * Created according to the specifications found here:
  * http://doc.mapeditor.org/reference/tmx-map-format/
  *
- * @author Logan Moore
+ * @author Zaid
  * @version 1.0
  ============================================================================*/
 

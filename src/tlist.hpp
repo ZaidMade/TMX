@@ -5,7 +5,7 @@
  * Tiny singly-linked list used for passing around lists with only a pointer
  * copy.
  *
- * @author Logan Moore
+ * @author Zaid
  * @version 1.0
  ============================================================================*/
 

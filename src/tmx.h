@@ -7,7 +7,7 @@
  * Wrapper class for the core TMX functions. This allows the end user to
  * access the map data much safer and easier than using the core functions.
  *
- * @author Logan Moore
+ * @author Zaid
  * @version 1.0
  ============================================================================*/
 
